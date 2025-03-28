@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    tools{
+        maven 'maven'
+    }
+    stages{
+        stage('CheckOut'){
+            steps{
+                git url:"https://github.com/DEEP-666/Dev_prac_4",branch:'main'
+            }
+        }
+        stage('build'){
+            steps{
+                bat 'mvn build'
+            }
+        }
+        stage('test'){
+            steps{
+                bat 'mvn test'
+            }
+        }
+    }
+}
