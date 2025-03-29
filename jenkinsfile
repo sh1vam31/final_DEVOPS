@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('CheckOut'){
             steps{
-                git url:"https://github.com/DEEP-666/Dev_prac_4",branch:'main'
+                git url:"https://github.com/sh1vam31/final_DEVOPS.git",branch:'main'
             }
         }
         stage('build'){
